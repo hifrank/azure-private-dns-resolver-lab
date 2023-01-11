@@ -1,7 +1,6 @@
 
 provider "azurerm" {
   features {}
-  #subscription_id = "b445bd8a-5145-4852-bc52-c9a7b3b89382"
 }
 
 # create resource groups 
@@ -219,7 +218,7 @@ resource "azurerm_virtual_machine" "dns_test" {
 }
 
 ##############
-# 4. link ruleset to vnet(hub & spoke)
+# 4. link ruleset to vnets(hub & spoke)
 ##############
 # https://learn.microsoft.com/en-us/azure/dns/private-resolver-endpoints-rulesets#ruleset-links
 resource "azurerm_private_dns_resolver_virtual_network_link" "ew_hub" {
